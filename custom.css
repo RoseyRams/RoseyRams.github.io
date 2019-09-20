@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(#ffc9c9 55%, white);
+    /* background-image: linear-gradient(#ffc9c9 55%, white); */
 }
 
 .container {
@@ -21,9 +21,8 @@ h1 {
     font-family: 'Libre Franklin';
     font-size: 3rem;
     margin-bottom: .5rem;
-    text-align: center;
     /* text-transform: uppercase; */
-    font-weight: 200;
+    font-weight: 400;
     color: #12232F;
 }
 h5 {
@@ -48,12 +47,23 @@ p {
     border: 1.5px solid rgba(200,200,200,.75);
 }
 
+.sidenav{
+    height: 100%;
+    position: fixed;
+    width: 100px;
+    background-color: red;
+}
+
+.small_icon{
+    height: 40px;
+    width: 40px;
+}
+
 @media screen and (max-width: 600px){
     h1 {
         font-family: 'Libre Franklin';
         font-size: 2.2rem;
         margin-bottom: .5rem;
-        text-align: center;
         /* text-transform: uppercase; */
         font-weight: 200;
         color: #12232F;
@@ -77,3 +87,51 @@ p {
         color: rgb(94, 94, 94);
     }
 }
+
+/*
+ * Sidebar
+ */
+
+ .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 48px 0 0; /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  }
+  
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+  
+  @supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+      position: -webkit-sticky;
+      position: sticky;
+    }
+  }
+  
+  .sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+  }
+
+  /*
+ * Content
+ */
+
+[role="main"] {
+    padding-top: 48px; /* Space for fixed navbar */
+  }
