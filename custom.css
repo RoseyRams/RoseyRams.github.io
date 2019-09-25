@@ -88,6 +88,9 @@ p {
     #dontshow{
         visibility: visible;
     }
+    #showshow{
+        visibility: hidden;
+    }
 }
 
 /*
